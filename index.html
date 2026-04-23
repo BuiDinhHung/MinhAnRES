@@ -12,18 +12,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         /* Ẩn thanh cuộn cho toàn bộ trang web nhưng vẫn cuộn bình thường */
-        html, body {
-            -ms-overflow-style: none;  /* Ẩn trên Internet Explorer và Edge */
-            scrollbar-width: none;  /* Ẩn trên Firefox */
+        html,
+        body {
+            -ms-overflow-style: none;
+            /* Ẩn trên Internet Explorer và Edge */
+            scrollbar-width: none;
+            /* Ẩn trên Firefox */
         }
 
-        html::-webkit-scrollbar, body::-webkit-scrollbar {
-            display: none; /* Ẩn trên Chrome, Safari và Opera */
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+            /* Ẩn trên Chrome, Safari và Opera */
         }
+
         /* Chống Webcake ép khung nếu nhúng vào Webcake */
-        .ladi-html-code { width: 100% !important; height: auto !important; overflow: visible !important; }
-        
+        .ladi-html-code {
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -188,8 +201,13 @@
             z-index: 3;
         }
 
-        .arrow.left { left: 20px; }
-        .arrow.right { right: 20px; }
+        .arrow.left {
+            left: 20px;
+        }
+
+        .arrow.right {
+            right: 20px;
+        }
 
         .float {
             position: absolute;
@@ -267,8 +285,13 @@
             transition: all 0.4s ease;
         }
 
-        .img-left img { transform: rotate(-6deg); }
-        .img-right img { transform: rotate(6deg); }
+        .img-left img {
+            transform: rotate(-6deg);
+        }
+
+        .img-right img {
+            transform: rotate(6deg);
+        }
 
         .about-content {
             flex: 1.5;
@@ -320,7 +343,9 @@
             transition: background 0.3s;
         }
 
-        .btn-booking:hover { background-color: #d13800; }
+        .btn-booking:hover {
+            background-color: #d13800;
+        }
 
         .btn-booking .cal-icon {
             background-color: #f4c542;
@@ -464,7 +489,9 @@
             scrollbar-width: none;
         }
 
-        .gallery-grid::-webkit-scrollbar { display: none; }
+        .gallery-grid::-webkit-scrollbar {
+            display: none;
+        }
 
         .gallery-item {
             flex: 0 0 calc(25% - 15px);
@@ -482,7 +509,9 @@
             transition: transform 0.3s;
         }
 
-        .gallery-item img:hover { transform: scale(1.03); }
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
 
         .item-name {
             color: #f4c542;
@@ -500,9 +529,17 @@
             user-select: none;
         }
 
-        .slider-arrow:hover { color: #e0b030; }
-        .slider-left { margin-right: 15px; }
-        .slider-right { margin-left: 15px; }
+        .slider-arrow:hover {
+            color: #e0b030;
+        }
+
+        .slider-left {
+            margin-right: 15px;
+        }
+
+        .slider-right {
+            margin-left: 15px;
+        }
 
         /* ================= TESTIMONIAL SECTION ================= */
         .testimonial-section {
@@ -520,7 +557,9 @@
             align-items: center;
         }
 
-        .testi-left { flex: 1; }
+        .testi-left {
+            flex: 1;
+        }
 
         .testi-subtitle {
             color: #f4c542;
@@ -626,7 +665,9 @@
             gap: 30px;
         }
 
-        .footer-col { flex: 1; }
+        .footer-col {
+            flex: 1;
+        }
 
         .footer-left {
             display: flex;
@@ -690,7 +731,7 @@
             padding: 15px 25px;
             border-radius: 2px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             border: 2px solid #00aa6c;
         }
 
@@ -701,7 +742,9 @@
             font-size: 15px;
         }
 
-        .ta-title:hover { text-decoration: underline; }
+        .ta-title:hover {
+            text-decoration: underline;
+        }
 
         .ta-stars {
             color: #00aa6c;
@@ -715,7 +758,9 @@
             margin-bottom: 10px;
         }
 
-        .tripadvisor-widget img { width: 120px; }
+        .tripadvisor-widget img {
+            width: 120px;
+        }
 
         .footer-right {
             display: flex;
@@ -749,96 +794,219 @@
             text-align: center;
             padding-top: 25px;
             margin-top: 30px;
-            border-top: 1px dashed rgba(255,255,255,0.2);
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
             font-size: 13px;
             color: #aaaaaa;
         }
 
         /* ================= RESPONSIVE ĐIỆN THOẠI & TABLET CHUẨN ================= */
         @media (max-width: 992px) {
-            .hero { 
-                height: auto; 
-                min-height: 100vh; 
-                display: flex; 
-                flex-direction: column; 
-                padding-top: 15px; 
-                padding-bottom: 120px; 
-            }
-            
-            .topbar { 
-                position: relative; 
-                top: 0; 
-                flex-direction: row; 
-                justify-content: space-between; 
-                padding: 0 15px; 
-                gap: 10px; 
-            }
-            .topbox { 
-                justify-content: flex-start; 
-                text-align: left; 
-                font-size: 11px; 
-                gap: 6px; 
-            }
-            .topbox div { line-height: 1.3; }
-            .icon {
-                width: 26px; 
-                height: 26px;
-                font-size: 12px;
-                flex-shrink: 0; 
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                padding-top: 15px;
+                padding-bottom: 120px;
             }
 
-            .navbar { position: relative; top: 0; margin-top: 30px; }
-            .nav-inner { flex-direction: column; gap: 20px; }
-            
-            .logo { position: relative; top: 0; left: 0; transform: none; order: -1; margin: 0 auto 5px; }
-            .menu { flex-wrap: wrap; justify-content: center; gap: 15px; text-align: center; }
-            
-            .center-content { position: relative; top: 0; left: 0; transform: none; margin-top: 40px; }
-            .center-content h1 { font-size: 40px; }
-            .arrow { display: none; } 
-            
-            .about-section { flex-direction: column; margin: 40px auto; }
-            .img-left img, .img-right img { transform: rotate(0); max-width: 100%; }
-            .about-content { order: -1; margin-bottom: 30px; }
-            
-            .showcase-body { flex-direction: column; padding: 20px; }
-            .showcase-item img { height: auto; max-height: 300px; }
-            
-            .gallery-grid { flex-wrap: nowrap; }
-            .gallery-item { flex: 0 0 calc(50% - 10px); }
-            
-            .testi-container { flex-direction: column; text-align: center; }
-            .testi-subtitle { justify-content: center; }
-            .testi-right { flex-direction: column; border-top: 1px dashed rgba(255, 255, 255, 0.4); padding-top: 40px; gap: 30px; }
-            .review-box { border-left: none; padding-left: 0; text-align: center; }
-            .reviewer-info { justify-content: center; }
-            
-            .footer-container { flex-direction: column; gap: 40px; }
-            .footer-right { justify-content: center; text-align: center; }
-            .footer-contact li { justify-content: flex-start; }
+            .topbar {
+                position: relative;
+                top: 0;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 15px;
+                gap: 10px;
+            }
+
+            .topbox {
+                justify-content: flex-start;
+                text-align: left;
+                font-size: 11px;
+                gap: 6px;
+            }
+
+            .topbox div {
+                line-height: 1.3;
+            }
+
+            .icon {
+                width: 26px;
+                height: 26px;
+                font-size: 12px;
+                flex-shrink: 0;
+            }
+
+            .navbar {
+                position: relative;
+                top: 0;
+                margin-top: 30px;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .logo {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+                order: -1;
+                margin: 0 auto 5px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .center-content {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+                margin-top: 40px;
+            }
+
+            .center-content h1 {
+                font-size: 40px;
+            }
+
+            .arrow {
+                display: none;
+            }
+
+            .about-section {
+                flex-direction: column;
+                margin: 40px auto;
+            }
+
+            .img-left img,
+            .img-right img {
+                transform: rotate(0);
+                max-width: 100%;
+            }
+
+            .about-content {
+                order: -1;
+                margin-bottom: 30px;
+            }
+
+            .showcase-body {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .showcase-item img {
+                height: auto;
+                max-height: 300px;
+            }
+
+            .gallery-grid {
+                flex-wrap: nowrap;
+            }
+
+            .gallery-item {
+                flex: 0 0 calc(50% - 10px);
+            }
+
+            .testi-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .testi-subtitle {
+                justify-content: center;
+            }
+
+            .testi-right {
+                flex-direction: column;
+                border-top: 1px dashed rgba(255, 255, 255, 0.4);
+                padding-top: 40px;
+                gap: 30px;
+            }
+
+            .review-box {
+                border-left: none;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .reviewer-info {
+                justify-content: center;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-right {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .footer-contact li {
+                justify-content: flex-start;
+            }
         }
 
         @media (max-width: 768px) {
-            .topbox { font-size: 9px; gap: 4px; }
-            .icon { width: 22px; height: 22px; font-size: 10px; }
-            .topbar { padding: 0 10px; }
+            .topbox {
+                font-size: 9px;
+                gap: 4px;
+            }
 
-            .center-content h1 { font-size: 32px; }
-            .center-content p { font-size: 14px; }
-            
-            .gallery-item { flex: 0 0 calc(100%); }
-            .slider-arrow { display: block; font-size: 24px; padding: 5px; }
-            .slider-left { margin-right: 5px; }
-            .slider-right { margin-left: 5px; }
-            
-            .testi-title { font-size: 28px; }
+            .icon {
+                width: 22px;
+                height: 22px;
+                font-size: 10px;
+            }
+
+            .topbar {
+                padding: 0 10px;
+            }
+
+            .center-content h1 {
+                font-size: 32px;
+            }
+
+            .center-content p {
+                font-size: 14px;
+            }
+
+            .gallery-item {
+                flex: 0 0 calc(100%);
+            }
+
+            .slider-arrow {
+                display: block;
+                font-size: 24px;
+                padding: 5px;
+            }
+
+            .slider-left {
+                margin-right: 5px;
+            }
+
+            .slider-right {
+                margin-left: 5px;
+            }
+
+            .testi-title {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="hero-wrapper">
+    <div class="hero-wrapper" id="home">
         <div class="hero">
             <div class="overlay"></div>
 
@@ -862,11 +1030,11 @@
 
             <div class="navbar">
                 <div class="nav-inner">
-                    <div class="menu">
-                        <a href="#">Home</a>
-                        <a href="#">Speisekarte</a>
-                        <a href="#">Galerie</a>
-                        <a href="#">Kontakt</a>
+                   <div class="menu">
+                        <a href="#home">Home</a>
+                        <a href="#speisekarte">Speisekarte</a>
+                        <a href="#galerie">Galerie</a>
+                        <a href="#kontakt">Kontakt</a>
                     </div>
 
                     <div class="logo"></div>
@@ -897,7 +1065,7 @@
 
     <section class="about-section">
         <div class="img-box img-left">
-            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&q=80"
+            <img src="/vit.png"
                 alt="Vietnamese Dish">
         </div>
 
@@ -928,17 +1096,15 @@
         </div>
 
         <div class="img-box img-right">
-            <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80"
+            <img src="/22.png"
                 alt="Fresh Spring Rolls">
         </div>
     </section>
 
-    <section class="discover-section">
+   <section class="discover-section" id="speisekarte">
         <h2 class="discover-title">Unsere Speisekarte entdecken</h2>
         <p class="discover-desc">
-            Die Speisekarte mit ihren bereits berühmten Frühlingsrollen, Nudelsalaten und knusprigen Rice Bowls bietet
-            gesunde, aber unglaublich aromatische Speisen, die mit den besten und frischesten Zutaten zubereitet werden.
-            Denken Sie an 100 % lokale, neu interpretierte Hausmannskost mit ausschließlich vietnamesischen Zutaten.
+            Entdecken Sie unsere vielfältige Speisekarte: von frischem Sushi (Maki, Nigiri, Sashimi und exklusive Special Rolls) über herzhafte Poke und Nem Bowls bis hin zu knusprigen Tapas wie "Papa's Girl". Begleitet wird Ihr Essen von unseren erfrischenden hausgemachten Limonaden oder klassischen Cocktails.
         </p>
         <p class="discover-note">
             Preise und Produktauswahl können sich gelegentlich ändern und werden online möglicherweise nicht sofort
@@ -951,7 +1117,7 @@
             <div class="showcase-body">
 
                 <div class="showcase-item">
-                    <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=600&q=80"
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80"
                         alt="Speisekarte - Minh An">
                     <a href="#" class="btn-green">
                         <i class="fas fa-utensils"></i> Speisekarte
@@ -959,7 +1125,7 @@
                 </div>
 
                 <div class="showcase-item">
-                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
                         alt="Getränkekarte">
                     <a href="#" class="btn-green">
                         <i class="fas fa-cocktail"></i> Getränkekarte
@@ -969,10 +1135,10 @@
             </div>
         </div>
     </section>
-    
-    <section class="gallery-section">
 
-        <div class="gallery-block">
+    <section class="gallery-section"id="galerie">
+
+      <div class="gallery-block">
             <h2 class="gallery-title">Unsere beliebtesten Gerichte (Bestseller)</h2>
 
             <div class="slider-wrapper">
@@ -980,41 +1146,40 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80"
-                            alt="Minh An Bestseller 1">
-                        <p class="item-name">Minh An Spezial-Kokos-Eis</p>
+                        <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&w=400&q=80"
+                            alt="Sake Sashimi">
+                        <p class="item-name">Sake Sashimi (Frischer Lachs)</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=400&q=80"
-                            alt="Minh An Bestseller 2">
-                        <p class="item-name">Traditionelle Phở Bò</p>
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=400&q=80"
+                            alt="Wabi Sabi Special Roll">
+                        <p class="item-name">Wabi Sabi (Special Roll)</p>
                     </div>
                     <div class="gallery-item">
                         <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=400&q=80"
-                            alt="Minh An Bestseller 3">
+                            alt="Nem Bowl">
                         <p class="item-name">Nem Bowl (Frühlingsrollen)</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=400&q=80"
-                            alt="Minh An Bestseller 4">
-                        <p class="item-name">Cơm Thịt Nướng Reisplatte</p>
+                        <img src="https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=400&q=80"
+                            alt="Papa's Girl">
+                        <p class="item-name">Papa's Girl (Knusprige Garnelen)</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&w=400&q=80"
-                            alt="Minh An Bestseller 5">
-                        <p class="item-name">Knusprige Garnelen (Papa's Girl)</p>
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+                            alt="Annam Sunrise">
+                        <p class="item-name">Annam Sunrise Limonade</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80"
-                            alt="Minh An Bestseller 6">
-                        <p class="item-name">Frischer Mango-Salat</p>
+                        <img src="/set.png"
+                            alt="Minh An Special Set">
+                        <p class="item-name">Minh An Special Set</p>
                     </div>
                 </div>
 
                 <div class="slider-arrow slider-right">❯</div>
             </div>
         </div>
-
         <div class="gallery-block">
             <h2 class="gallery-title">Gemütliche Atmosphäre (Tolles Ambiente)</h2>
 
@@ -1023,27 +1188,27 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=400&q=80"
+                        <img src="/view_res.png"
                             alt="Minh An Ambiente 1">
                         <p class="item-name">Restaurant-Eingang Minh An</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=400&q=80"
+                        <img src="/2.png"
                             alt="Minh An Ambiente 2">
                         <p class="item-name">Gemütlicher Sitzbereich</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=400&q=80"
+                        <img src="/bar.png"
                             alt="Minh An Ambiente 3">
                         <p class="item-name">Bar & Getränke</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=400&q=80"
+                        <img src="/view.png"
                             alt="Minh An Ambiente 4">
                         <p class="item-name">Asiatische Dekoration</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=400&q=80"
+                        <img src="/warm.png"
                             alt="Minh An Ambiente 5">
                         <p class="item-name">Elegante Tischdekoration</p>
                     </div>
@@ -1062,36 +1227,45 @@
 
     <section class="testimonial-section">
         <div class="testi-container">
-            
+
             <div class="testi-left">
-                <span class="testi-subtitle">Kundenstimmen <i class="fas fa-quote-right quote-icon" style="font-size: 18px;"></i></span>
+                <span class="testi-subtitle">Kundenstimmen <i class="fas fa-quote-right quote-icon"
+                        style="font-size: 18px;"></i></span>
                 <h2 class="testi-title">Was sagen unsere Kunden über uns?</h2>
             </div>
-            
+
             <div class="testi-right">
-                
+
                 <div class="review-box">
                     <p class="review-text">
-                        "Das Essen bei Minh An hat meine Erwartungen übertroffen! Die Aromen sind authentisch und jedes Gericht erzählt eine einzigartige Geschichte. Das Personal ist super freundlich und aufmerksam. Ein absolutes Muss in Glauchau!"
+                        "So lecker und eine wirklich nette Bedienung. Auf das Essen muss man auch nicht lange warten.
+                        Insgesamt nur zu empfehlen. Sehr frische Gerichte.
+                        Am Ende bekamen wir sogar einen Pflaumenwein geschenkt. TOP!"
                     </p>
                     <div class="reviewer-info">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Julia Weber">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjUZqCQfdRfV2RAhcBTpuKSWJqd7_fn7O1FZ8LU9SAEzq6KtXaY=w86-h86-p-rp-mo-ba2-br100"
+                            alt="Julia Weber">
                         <div class="reviewer-details">
-                            <h4>JULIA WEBER</h4>
-                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <h4>Saskia Azir</h4>
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="review-box">
                     <p class="review-text">
-                        "Ich bin zufällig auf Minh An gestoßen und was für eine angenehme Überraschung das war! Die Sushi-Kreationen sind fantastisch und die Atmosphäre ist sehr gemütlich. Ich kann es kaum erwarten, mehr Freunde hierher zu bringen!"
+                        "Es schmeckt jedes Mal fantastisch. Die Qualität ist top und der Service ist super freundlich.
+                        Auch das Abholen der Speisen funktioniert jedes Mal ohne Probleme. Das Preis-Leistugsverhältnis
+                        ist unschlagbar für diese tolle Qualität! "
                     </p>
                     <div class="reviewer-info">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="Lukas Schmidt">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocKb_1Sv5fsNSwaeyD-6KdRSTP19T6P_7Aln7Rd1H0LSMfynMA=w86-h86-p-rp-mo-br100"
+                            alt="Lukas Schmidt">
                         <div class="reviewer-details">
-                            <h4>LUKAS SCHMIDT</h4>
-                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <h4>Si Na</h4>
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
                 </div>
@@ -1101,12 +1275,15 @@
     </section>
 
     <section class="map-section">
-        <iframe src="https://maps.google.com/maps?q=Waldenburger%20Stra%C3%9Fe%2056,%2008371%20Glauchau&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://maps.google.com/maps?q=Waldenburger%20Stra%C3%9Fe%2056,%2008371%20Glauchau&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-    
-    <footer class="site-footer">
+
+    <footer class="site-footer"id="kontakt">
         <div class="footer-container">
-            
+
             <div class="footer-col footer-left">
                 <div class="footer-logo-img"></div>
                 <p class="footer-slogan">Ein Ort des Lachens und Genießens!</p>
@@ -1117,28 +1294,28 @@
                 </div>
             </div>
 
-        
+
 
             <div class="footer-col footer-right">
                 <ul class="footer-contact">
                     <li>
-                        <i class="fas fa-map-marker-alt"></i> 
+                        <i class="fas fa-map-marker-alt"></i>
                         Waldenburger Straße 56, 08371 Glauchau
                     </li>
                     <li>
-                        <i class="fas fa-phone-alt"></i> 
+                        <i class="fas fa-phone-alt"></i>
                         Hotline: +49 1525 85 09 888
                     </li>
                     <li>
-                        <i class="fab fa-whatsapp"></i> 
+                        <i class="fab fa-whatsapp"></i>
                         WhatsApp: +49 1525 85 09 888
                     </li>
                     <li>
-                        <i class="fas fa-envelope"></i> 
+                        <i class="fas fa-envelope"></i>
                         Email: info@minhan-restaurant.de
                     </li>
                     <li>
-                        <i class="fas fa-clock"></i> 
+                        <i class="fas fa-clock"></i>
                         <div>
                             Di - So: 11:00 - 14:30 & 16:30 - 22:00<br>
                             Mo: Geschlossen (außer Feiertage)
@@ -1148,7 +1325,7 @@
             </div>
 
         </div>
-        
+
         <div class="footer-bottom">
             Copyright © 2026 Minh An Restaurant. Alle Rechte vorbehalten.
         </div>
