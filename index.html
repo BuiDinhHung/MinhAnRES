@@ -15,6 +15,7 @@
         html {
             scroll-behavior: smooth;
         }
+
         /* Ẩn thanh cuộn cho toàn bộ trang web nhưng vẫn cuộn bình thường */
         html,
         body {
@@ -209,33 +210,58 @@
             right: 20px;
         }
 
+        /* Container ghim bên phải chính giữa */
         .float {
-            position: absolute;
+            position: fixed;
+            /* Ghim cố định */
             right: 20px;
-            bottom: 20px;
+            top: 50%;
+            /* Căn giữa theo chiều dọc */
+            transform: translateY(-50%);
+            /* Dịch chuyển ngược lại để chính giữa tuyệt đối */
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            z-index: 3;
+            gap: 15px;
+            z-index: 1000;
+            /* Luôn nằm trên cùng */
         }
 
         .float a {
-            width: 45px;
-            height: 45px;
-            background: #333333;
+            width: 55px;
+            /* Tăng kích thước một chút cho dễ bấm */
+            height: 55px;
+            background: rgba(51, 51, 51, 0.9);
+            /* Màu nền tối có độ trong suốt */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #f4c542;
             text-decoration: none;
-            font-size: 20px;
-            transition: background 0.3s;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(244, 197, 66, 0.3);
         }
 
+        /* Hiệu ứng khi rê chuột */
         .float a:hover {
             background: #ff4500;
             color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Mobile: Thu nhỏ lại một chút để không che nội dung */
+        @media (max-width: 768px) {
+            .float {
+                right: 10px;
+            }
+
+            .float a {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
         }
 
         .bottom-layer {
@@ -1030,7 +1056,7 @@
 
             <div class="navbar">
                 <div class="nav-inner">
-                   <div class="menu">
+                    <div class="menu">
                         <a href="#home">Home</a>
                         <a href="#speisekarte">Speisekarte</a>
                         <a href="#galerie">Galerie</a>
@@ -1039,7 +1065,8 @@
 
                     <div class="logo"></div>
 
-                    <a href="https://wa.me/4915258509888" class="btn">
+                    <a href="https://wa.me/4915258509888?text=Hallo%20Minh%20An%20Restaurant,%20ich%20m%C3%B6chte%20einen%20Tisch%20reservieren.%20Name:%20...%20Personen:%20...%20Datum:%20...%20Uhrzeit:%20..."
+                        class="btn">
                         Reservierungen
                     </a>
                 </div>
@@ -1054,19 +1081,26 @@
             <div class="arrow right">❯</div>
 
             <div class="float">
-                <a href="#">⏰</a>
-                <a href="#">☎</a>
-                <a href="https://wa.me/4915258509888">💬</a>
-            </div>
+                <a href="#kontakt" title="Öffnungszeiten">
+                    <i class="fas fa-clock"></i>
+                </a>
 
+                <a href="tel:+4915258509888" title="Anrufen">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+
+                <a href="https://wa.me/4915258509888?text=Hallo%20Minh%20An%20Restaurant,%20ich%20m%C3%B6chte%20einen%20Tisch%20reservieren."
+                    target="_blank" title="WhatsApp Chat">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
             <div class="bottom-layer"></div>
         </div>
     </div>
 
     <section class="about-section">
         <div class="img-box img-left">
-            <img src="img/vit.png"
-                alt="Vietnamese Dish">
+            <img src="img/vit.png" alt="Vietnamese Dish">
         </div>
 
         <div class="about-content">
@@ -1090,21 +1124,23 @@
                 Kommen Sie vorbei und genießen Sie den Geschmack Asiens.
             </p>
 
-            <a href="https://wa.me/4915258509888" class="btn-booking">
+            <a href="https://wa.me/4915258509888?text=Hallo%20Minh%20An%20Restaurant,%20ich%20m%C3%B6chte%20einen%20Tisch%20reservieren."
+                target="_blank" class="btn-booking">
                 Jetzt reservieren <span class="cal-icon">📅</span>
             </a>
         </div>
 
         <div class="img-box img-right">
-            <img src="img/22.png"
-                alt="Fresh Spring Rolls">
+            <img src="img/22.png" alt="Fresh Spring Rolls">
         </div>
     </section>
 
-   <section class="discover-section" id="speisekarte">
+    <section class="discover-section" id="speisekarte">
         <h2 class="discover-title">Unsere Speisekarte entdecken</h2>
         <p class="discover-desc">
-            Entdecken Sie unsere vielfältige Speisekarte: von frischem Sushi (Maki, Nigiri, Sashimi und exklusive Special Rolls) über herzhafte Poke und Nem Bowls bis hin zu knusprigen Tapas wie "Papa's Girl". Begleitet wird Ihr Essen von unseren erfrischenden hausgemachten Limonaden oder klassischen Cocktails.
+            Entdecken Sie unsere vielfältige Speisekarte: von frischem Sushi (Maki, Nigiri, Sashimi und exklusive
+            Special Rolls) über herzhafte Poke und Nem Bowls bis hin zu knusprigen Tapas wie "Papa's Girl". Begleitet
+            wird Ihr Essen von unseren erfrischenden hausgemachten Limonaden oder klassischen Cocktails.
         </p>
         <p class="discover-note">
             Preise und Produktauswahl können sich gelegentlich ändern und werden online möglicherweise nicht sofort
@@ -1119,7 +1155,8 @@
                 <div class="showcase-item">
                     <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80"
                         alt="Speisekarte - Minh An">
-                    <a href="https://drive.google.com/file/d/1SikY1WfxtqZan_bK7xD9QcTy0GBBh5jG/preview" class="btn-green">
+                    <a href="https://drive.google.com/file/d/1SikY1WfxtqZan_bK7xD9QcTy0GBBh5jG/preview"
+                        class="btn-green">
                         <i class="fas fa-utensils"></i> Speisekarte
                     </a>
                 </div>
@@ -1127,7 +1164,8 @@
                 <div class="showcase-item">
                     <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
                         alt="Getränkekarte">
-                    <a href="https://drive.google.com/file/d/1SikY1WfxtqZan_bK7xD9QcTy0GBBh5jG/preview" class="btn-green">
+                    <a href="https://drive.google.com/file/d/1SikY1WfxtqZan_bK7xD9QcTy0GBBh5jG/preview"
+                        class="btn-green">
                         <i class="fas fa-cocktail"></i> Getränkekarte
                     </a>
                 </div>
@@ -1135,9 +1173,9 @@
         </div>
     </section>
 
-    <section class="gallery-section"id="galerie">
+    <section class="gallery-section" id="galerie">
 
-      <div class="gallery-block">
+        <div class="gallery-block">
             <h2 class="gallery-title">Unsere beliebtesten Gerichte (Bestseller)</h2>
 
             <div class="slider-wrapper">
@@ -1170,8 +1208,7 @@
                         <p class="item-name">Annam Sunrise Limonade</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/set.png"
-                            alt="Minh An Special Set">
+                        <img src="img/set.png" alt="Minh An Special Set">
                         <p class="item-name">Minh An Special Set</p>
                     </div>
                 </div>
@@ -1187,28 +1224,23 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="/view_res.png"
-                            alt="Minh An Ambiente 1">
+                        <img src="/view_res.png" alt="Minh An Ambiente 1">
                         <p class="item-name">Restaurant-Eingang Minh An</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/2.png"
-                            alt="Minh An Ambiente 2">
+                        <img src="img/2.png" alt="Minh An Ambiente 2">
                         <p class="item-name">Gemütlicher Sitzbereich</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/bar.png"
-                            alt="Minh An Ambiente 3">
+                        <img src="img/bar.png" alt="Minh An Ambiente 3">
                         <p class="item-name">Bar & Getränke</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/view.png"
-                            alt="Minh An Ambiente 4">
+                        <img src="img/view.png" alt="Minh An Ambiente 4">
                         <p class="item-name">Asiatische Dekoration</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/warm.png"
-                            alt="Minh An Ambiente 5">
+                        <img src="img/warm.png" alt="Minh An Ambiente 5">
                         <p class="item-name">Elegante Tischdekoration</p>
                     </div>
                     <div class="gallery-item">
@@ -1280,7 +1312,7 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <footer class="site-footer"id="kontakt">
+    <footer class="site-footer" id="kontakt">
         <div class="footer-container">
 
             <div class="footer-col footer-left">
